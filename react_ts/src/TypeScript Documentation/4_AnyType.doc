@@ -7,7 +7,7 @@
 
 // But it is not at all recommendable when we know type.
 
-Example : 
+Example:
 let value: any;
 
 value = 42;        // number
@@ -15,3 +15,13 @@ value = 'hello';   // string
 value = true;      // boolean
 value = { a: 1 };  // object
 value = [1, 2, 3]; // array
+
+// Flexibility vs. Safety: While any provides flexibility, it sacrifices the safety and advantages 
+// of TypeScript's type system. Overusing any can lead to errors that TypeScript is designed to prevent.
+
+// Type Inference: TypeScript will infer the type any if you don't 
+// provide an explicit type and if the type cannot be inferred from the context.
+Example:
+let value1;  // value is implicitly of type any
+value1 = 42;
+value1 = 'hello';
