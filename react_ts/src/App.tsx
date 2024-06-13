@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 import './App.css';
 import InputFiled from './Components/InputFiled';
+import { Todo } from './model';
 
 const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
+  const [todods, setTodos] = useState<Todo[]>([]);
+
+  const handleAdd = (e: SyntheticEvent) => {
+    e.preventDefault();
+    if (todo) {
+      setTodos([...todods, { id: Date.now(), todo: todo, isDone: false }]);
+      setTodo(" ");
+    }
+  }
+
   return (
     <div className="App">
       <span className='heading'>TASKIFY </span>
-      <InputFiled />
+      <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
     </div>
   );
 }
