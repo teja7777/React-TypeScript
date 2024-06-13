@@ -1,0 +1,47 @@
+
+//1.Using Function Type(Not Best Practice).
+let printName: Function; //Basicway.
+printName = (value: string): void => {
+    console.log(value)
+}
+printName("Teja");
+//or
+printName = function (value: string): void {
+    console.log(value)
+}
+printName("Teja")
+
+//2.Using Specific Function Types(It’s usually better to define the function type explicitly)
+let printName1: (name: string) => void;
+
+printName1 = function (name: string): void {
+    console.log(name);
+}
+printName1("teja");
+
+//3.Using Type Aliases(You can also create a type alias for the function type)
+
+type PrintNameType = (name: string) => void; //(return type can be string,array,number,boolean etc...)
+
+let printName3: PrintNameType;
+
+printName3 = function (value: string) {
+    console.log(value);
+}
+
+printName3("Teja");
+
+
+//4.Using interface.(Alternatively, you can use an interface to define the function type)
+
+interface PrintNameType1 {
+    (name: string): void;
+}
+
+let printName4: PrintNameType1;
+
+printName4 = function (value: string): void {
+    console.log(value);
+}
+
+printName4("Teja");
