@@ -1,0 +1,17 @@
+// In TypeScript, the any type is a type that allows you to opt out of type 
+// checking for a variable.It is a way to indicate that a value can be of any type,
+// and TypeScript will not perform any type checking on it.This is useful when you
+// have a value that can be dynamically typed or when you're 
+// migrating JavaScript code to TypeScript and you want to gradually add types.
+
+
+// But it is not at all recommendable when we know type.
+
+Example : 
+let value: any;
+
+value = 42;        // number
+value = 'hello';   // string
+value = true;      // boolean
+value = { a: 1 };  // object
+value = [1, 2, 3]; // array
