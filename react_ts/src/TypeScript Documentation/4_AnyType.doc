@@ -25,3 +25,16 @@ Example:
 let value1;  // value is implicitly of type any
 value1 = 42;
 value1 = 'hello';
+
+/******* UNKNOW over ANY ******/
+// For safer handling of unknown types, consider using unknown instead of any.
+// Unlike any, unknown forces you to perform type checks before performing operations on the variable.
+
+let value2: unknown;
+
+value2 = 42;
+value2 = 'hello';
+
+if (typeof value2 === 'string') {
+    console.log(value2.toUpperCase()); // type-checked
+}

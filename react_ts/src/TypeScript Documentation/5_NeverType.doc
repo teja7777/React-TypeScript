@@ -1,0 +1,32 @@
+// In TypeScript, the never type represents a value that never occurs.
+// It is used to signify that a function or variable does not have a value.
+// This can be useful in several scenarios, such as functions that always
+// throw an error or functions that never return (e.g., infinite loops).
+
+
+/************  Key Points about never Type **************/
+
+// 1.Unreachable Code: The never type is often used to indicate code that is unreachable.
+// For example, if a function always throws an error, it will never return a value, so its return type can be never.
+
+// 2.Function Return Types: A function that has a return type of never is one that never successfully completes.
+//  It either throws an exception or runs indefinitely.
+
+// 3.Exhaustive Checks: The never type is useful for exhaustive checks in TypeScript,
+//  particularly in union types and switch statements. It helps ensure all possible cases are handled.
+
+/************  Key Points about never Type **************/
+
+
+/******************EXAMPLES **********/
+// 1.Here’s a function that always throws an Error, so it never returns:
+function error(message: string): never {
+    throw new Error(message);
+}
+
+//2.A function that contains an infinite loop will never return:
+function infiniteLoop(): never {
+    while (true) {
+        // do something endlessly
+    }
+}
