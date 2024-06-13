@@ -7,7 +7,7 @@ interface Props {
   handleAdd: (e:SyntheticEvent) => void;
 }
 
-const InputFiled: React.FC<Props> = ({ todo, setTodo,handleAdd }: Props) => {
+const InputFiled: React.FC<Props> = ({ todo, setTodo,handleAdd }) => {
   return (
     <form className='input' onSubmit={handleAdd}>
       <input type='input' value={todo} onChange={(e) => { setTodo(e.target.value) }} placeholder='enter to do' className='input__box' />

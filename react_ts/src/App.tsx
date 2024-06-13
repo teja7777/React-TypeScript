@@ -5,12 +5,12 @@ import { Todo } from './model';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
-  const [todods, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   const handleAdd = (e: SyntheticEvent) => {
     e.preventDefault();
     if (todo) {
-      setTodos([...todods, { id: Date.now(), todo: todo, isDone: false }]);
+      setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]);
       setTodo(" ");
     }
   }
