@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+.App {
+  background-color: #2f74c0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .heading {
+  font-family: 'Neucha', cursive;
+  color: white;
+  margin:35px 0px;
+  font-size: 40px;
+  z-index: 1;
+}
+>>>>>>> 2afd91852e94d468bf1f06eda2a9f5bc736daef7
