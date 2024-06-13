@@ -18,7 +18,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <span className='heading'>TASKIFY </span>
-      <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+{/*       <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} /> */}
     </div>
   );
 }
