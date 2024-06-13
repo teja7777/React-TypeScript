@@ -10,8 +10,8 @@ interface Props {
 const InputFiled: React.FC<Props> = ({ todo, setTodo,handleAdd }: Props) => {
   return (
     <form className='input' onSubmit={handleAdd}>
-      {/* <input type='input' value={todo} onChange={(e) => { setTodo(e.target.value) }} placeholder='enter to do' className='input__box' />
-      <button className='input_button' type='submit'>GO</button> */}
+      <input type='input' value={todo} onChange={(e) => { setTodo(e.target.value) }} placeholder='enter to do' className='input__box' />
+      <button className='input_button' type='submit'>GO</button>
     </form>
   )
 }
