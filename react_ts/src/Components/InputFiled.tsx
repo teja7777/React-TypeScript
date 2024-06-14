@@ -1,11 +1,11 @@
 import React, { SyntheticEvent } from 'react'
 import "./styles.css"
 
-// interface Props {
-//   todo: string;
-//   setTodo: React.Dispatch<React.SetStateAction<string>>;
-//   handleAdd: (e:SyntheticEvent) => void;
-// }
+interface Props {
+  todo: string;
+  setTodo: React.Dispatch<React.SetStateAction<string>>;
+  handleAdd: (e:SyntheticEvent) => void;
+}
 
 const InputFiled: React.FC<Props> = ({ todo, setTodo,handleAdd }) => {
   return (
