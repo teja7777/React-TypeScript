@@ -1,0 +1,11 @@
+.single-card {
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
