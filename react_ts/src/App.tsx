@@ -1,26 +1,26 @@
-// import React, { SyntheticEvent, useState } from 'react';
-// import './App.css';
-// import InputFiled from './Components/InputFiled';
-// import { Todo } from './model';
+import React, { SyntheticEvent, useState } from 'react';
+import './App.css';
+import InputFiled from './Components/InputFiled';
+import { Todo } from './model';
 
-// const App: React.FC = () => {
-//   const [todo, setTodo] = useState<string>("");
-//   const [todos, setTodos] = useState<Todo[]>([]);
+const App: React.FC = () => {
+  const [todo, setTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]);
 
-//   const handleAdd = (e: SyntheticEvent) => {
-//     e.preventDefault();
-//     if (todo) {
-//       setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]);
-//       setTodo(" ");
-//     }
-//   }
+  const handleAdd = (e: SyntheticEvent) => {
+    e.preventDefault();
+    if (todo) {
+      setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]);
+      setTodo(" ");
+    }
+  }
 
-//   return (
-//     <div className="App">
-//       <span className='heading'>TASKIFY </span>
-//       <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
-//     </div>
-//   );
-// }
+  return (
+    <div className="App">
+      <span className='heading'>TASKIFY </span>
+      <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
