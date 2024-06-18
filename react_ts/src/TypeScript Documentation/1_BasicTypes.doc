@@ -1,6 +1,7 @@
 {
     //String Type    
     let name: string;
+    name = "Teja"
 
     //Number Type
     let age: number;
