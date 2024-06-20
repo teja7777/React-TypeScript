@@ -1,0 +1,41 @@
+1.Inference :
+Inference is noting but you don't need to specify type every where as type
+as ts is advanced then you.The main place specifying type is in functions
+or else it will take any tpe as parameter which is colpletely againist our
+type script.
+Example ::
+let userID = 20 ;(This is best practice ts already knows it's a number type.
+So no need to do this let userId : number = 20) ;
+
+2.About Any :
+Any is not type it just tells ts not to do any type check.If just declare a variable without
+initializing then it will be type any :
+Example :
+let name ;
+name = 123 ;
+name= "Teja";
+name = true ;
+
+3.Why we use type aliases :
+Just and example :
+function createUser({name:string,email:string}) : void{
+//Body part
+} ;
+
+createUser({name:"Teja",email:"teja.ulisetti@gmail.com",isPaid:true});(fails as
+extra boolean is missing)
+but see this case :
+let user = {name:"Teja",email:"teja.ulisetti@gmail.com",isPaid:true};
+createUSer(user) ;(It will get success that's the reason typa aliases came
+into picture) ;
+
+type User = {
+name : String,
+email:String,
+ispaid: boolean
+}(fails)
+
+4.Tuple is used in scenarios to fix the order of array data
+Example :
+let data : [string | number | boolean] = ["teja",1234,false](correct);
+let data1 : [string | number | boolean] = [1234,false,"teja"](fails);
