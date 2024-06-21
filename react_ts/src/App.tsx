@@ -3,6 +3,7 @@ import './App.css';
 import InputFiled from './Components/InputFiled';
 import { Todo } from './model';
 import CardsList from './Components/CardsList.tsx';
+import Stringtype from './Components/PracticingTypes/Stringtype';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       <span className='heading'>TASKIFY </span>
       <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <CardsList todos={todos} setTodos={setTodos} />
+      <Stringtype />
     </div>
   );
 }
