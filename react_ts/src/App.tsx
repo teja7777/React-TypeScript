@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <span className='heading'>TASKIFY </span>
       <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <CardsList todos={todos} setTodos={setTodos} />
-      <Stringtype />
+      {/* <Stringtype /> */}
     </div>
   );
 }
