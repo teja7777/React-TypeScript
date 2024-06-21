@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const NumberType = () => {
   let num1: number = 1;
@@ -14,8 +14,15 @@ const NumberType = () => {
   console.log(num2)
   // printNumber("teja");
 
+  const [number1, setNumber1] = useState(1);
+  const number2 = useRef<string | number | boolean>(23);
+  useEffect(() => {
+    setNumber1(25);
+  }, [])
+
+
   return (
-    <div></div>
+    <div>{number1}</div>
   )
 }
 
