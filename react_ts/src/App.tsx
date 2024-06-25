@@ -5,6 +5,7 @@ import { Todo } from './model';
 import CardsList from './Components/CardsList.tsx';
 import Stringtype from './Components/PracticingTypes/Stringtype';
 import NumberType from './Components/PracticingTypes/NumberType';
+import ArrayTpes from './Components/PracticingTypes/ArrayTpes';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -26,7 +27,8 @@ const App: React.FC = () => {
       <InputFiled todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <CardsList todos={todos} setTodos={setTodos} />
       {/* <Stringtype /> */}
-      <NumberType />
+      {/* <NumberType /> */}
+      <ArrayTpes todos={todos} setTodos={setTodos} />
     </div>
   );
 }
