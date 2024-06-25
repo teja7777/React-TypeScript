@@ -7,6 +7,7 @@ import Stringtype from './Components/PracticingTypes/Stringtype';
 import NumberType from './Components/PracticingTypes/NumberType';
 import ArrayTpes from './Components/PracticingTypes/ArrayTpes';
 import ArrayTypesPractice from './Components/PracticingTypes/ArrayTypesPractice';
+import ObjectTypesPractice from './Components/PracticingTypes/ObjectTypesPractice';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -19,6 +20,11 @@ const App: React.FC = () => {
     { label: "TestObject", value: "TestObject" },
     { label: "TestObject", value: "TestObject" }
   ]);
+
+  /*Just for object type practice */
+  const [objectPractice, setObjectPractice] = useState(
+    { name: "Teja", id: 25, salary: "200000000" }
+  )
 
 
   const handleAdd = (e: SyntheticEvent) => {
@@ -38,8 +44,11 @@ const App: React.FC = () => {
       {/* <Stringtype /> */}
       {/* <NumberType /> */}
       {/* <ArrayTpes todos={todos} setTodos={setTodos} /> */}
-      <ArrayTypesPractice arrayPractice={arrayPractice}
-        setArrayPractice={setArrayPractice} />
+      {/* <ArrayTypesPractice arrayPractice={arrayPractice}
+        setArrayPractice={setArrayPractice} /> */}
+      <ObjectTypesPractice objectPractice={objectPractice}
+        setObjectPractice={setObjectPractice}
+      />
     </div>
   );
 }
