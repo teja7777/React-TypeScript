@@ -6,10 +6,19 @@ import CardsList from './Components/CardsList.tsx';
 import Stringtype from './Components/PracticingTypes/Stringtype';
 import NumberType from './Components/PracticingTypes/NumberType';
 import ArrayTpes from './Components/PracticingTypes/ArrayTpes';
+import ArrayTypesPractice from './Components/PracticingTypes/ArrayTypesPractice';
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
+
+  /*Just for practice purpose */
+  const [arrayPractice, setArrayPractice] = useState<{ label: string, value: string }[]>([
+    { label: "TestObject", value: "TestObject" },
+    { label: "TestObject", value: "TestObject" },
+    { label: "TestObject", value: "TestObject" },
+    { label: "TestObject", value: "TestObject" }
+  ]);
 
 
   const handleAdd = (e: SyntheticEvent) => {
@@ -28,7 +37,9 @@ const App: React.FC = () => {
       <CardsList todos={todos} setTodos={setTodos} />
       {/* <Stringtype /> */}
       {/* <NumberType /> */}
-      <ArrayTpes todos={todos} setTodos={setTodos} />
+      {/* <ArrayTpes todos={todos} setTodos={setTodos} /> */}
+      <ArrayTypesPractice arrayPractice={arrayPractice}
+        setArrayPractice={setArrayPractice} />
     </div>
   );
 }
